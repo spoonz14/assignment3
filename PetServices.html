@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Pawsome Blog</title>
+</head>
+<body>
+    <header>
+        <h1>Pawsome Blog</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="PetServices.html">Pet Services</a></li>
+            <li><a href="LocateUs.html">Locate Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="posts-container">
+            <div class="post">
+                <h2>Dog Day Camp</h2>
+                <br>
+                <br>
+                <div class="accordion-container">
+                    <div id="accordion">
+                        <h3>Annual Hiking Trip</h3>
+                        <div>
+                            <p>
+                                Every year we host our annual hiking trip! It will be held on August 22nd 2024.
+                                To participate, sign up today: https://signuptoday.com 
+                            </p>
+                        </div>
+                        <h3>Puppy Day Camp</h3>
+                        <div>
+                            <p>
+                               Have you recently gotten a new puppy? We hold puppy training classes every Tuesday and Thursday.
+                               Sign up today: https://signuptoday.com 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Dog Hotel</h2>
+                <br>
+                <br>
+                <button class="collapsible" onclick="toggleCollapsible('tab1')">Daytime</button>
+                <div class="content" id="tab1">
+                    <p>Considering a Daytime stay at our Dog hotel? We provide an extensive range of activities and 
+                        outings during the day to keep your dog entertained and happy! Call: 403-667-3321 today to book
+                        your first stay for your dog.</p>
+                </div>
+            
+                <button class="collapsible" onclick="toggleCollapsible('tab2')">Overnight</button>
+                <div class="content" id="tab2">
+                    <p>Leaving town for a couple of days? Plan an overnight stay or two for your dog with our overnight stay program.
+                    Similar to the Daytime stay, we provide your dog with various activities and outings while also providing
+                    a comfortable and safe place to spend the night. Call to book today: 403-667-3321.</p>
+                </div>
+            </div>
+
+            <div class="post">
+                <h2>Dog Grooming Services</h2>
+                <br>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="DogPhoto4.jpg" alt="DogPhoto4">
+                        <h3>Coat Trimming</h3>
+                        <br>
+                        <p>Get a new haircut or a complete coat clean.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="DogPhoto2.jpg" alt="DogPhoto2">
+                        <h3>Nail Trimming</h3>
+                        <br>
+                        <p>Book today for your dog's much-needed nail trim</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="DogPhoto1.jpg" alt="DogPhoto3">
+                        <h3>Dental Hygiene</h3>
+                        <br>
+                        <p>Ensure only the best dental care for your dog by booking an appointment with us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-me-container">
+            <div class="post">
+                <h2>About Pawsome - photo from https://www.freepik.com/</h2>
+                <br>
+                <div class="image" style="height:250px; overflow: hidden;">
+                    <img src="DogPhoto5.jpg" alt="Dog Photo" style="max-width: 100%;">
+                </div>
+                <br>
+                <p>I started this blog to talk about my dog Ember, but it has evolved into much more than that. We run a weekly advice column on
+                    dog training, and dog life in general. If you enjoyed reading, or are interested in more canine content; please consider following me on the
+                    following social medias.
+                </p>
+            </div>
+
+            <div class="post">
+                <h3>Follow Me</h3>
+                <ul>
+                    <li>Twitter: <a href="twitter.com/Pawsome" target="_blank">twitter.com/Pawsome</a></li>
+                    <li>Instagram: <a href="instagram.com/Pawsome" target="_blank">instagram.com/Pawsome</a></li>
+                    <li>Facebook: <a href="facebook.com/Pawsome" target="_blank">facebook.com/Pawsome</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#collapsible").accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+
+            $("#accordion").accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+        });
+
+        function toggleCollapsible(tabId) {
+            var content = document.getElementById(tabId);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+        
+    </script>
+
+    <div class="footer">
+        <h2>Spencer Barr 2023 - All photos from https://www.freepik.com/</h2>
+    </div>
+</body>
+</html>
+
+

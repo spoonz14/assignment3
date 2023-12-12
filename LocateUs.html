@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN_0U4SnhhLhiSP1ohdapFUbYLLFUslMc&callback=initMap" defer></script>
+    <title>Pawsome Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1>Pawsome Blog</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="PetServices.html">Pet Services</a></li>
+            <li><a href="LocateUs.html">Locate Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="posts-container">
+
+            <div class="post">
+                <h2>Locate Us!</h2>
+                <p>We are located on 1624 Jacobs Ave, Dallas Texas, U.S., S4R GT4</p>
+            </div>
+
+            <div class="post">
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+            </div>
+
+          
+        </div>
+
+        <div class="about-me-container">
+            <div class="post">
+                <h2>About Pawsome - photo from https://www.freepik.com/</h2>
+                <div class="image" style="height:250px; overflow: hidden;">
+                    <img src="DogPhoto5.jpg" alt="Dog Photo" style="max-width: 100%;">
+                </div>
+                <p>I started this blog to talk about my dog Ember, but it has evolved into much more than that. We run a weekly advice column on
+                    dog training, and dog life in general. If you enjoyed reading, or are interested in more canine content; please consider following me on the
+                    following social medias.
+                </p>
+            </div>
+
+            <div class="post">
+                <h3>Follow Me</h3>
+                <ul>
+                    <li>Twitter: <a href="twitter.com/Pawsome" target="_blank">twitter.com/Pawsome</a></li>
+                    <li>Instagram: <a href="instagram.com/Pawsome" target="_blank">instagram.com/Pawsome</a></li>
+                    <li>Facebook: <a href="facebook.com/Pawsome" target="_blank">facebook.com/Pawsome</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#collapsible").accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content", 
+            });
+
+            $(".collapsible-container div").each(function () {
+                $(this).accordion({
+                    collapsible: true,
+                    active: false,
+                    heightStyle: "content", 
+                });
+            });
+        });
+
+        
+
+        function initMap() {
+    var dallasLatLng = new google.maps.LatLng(32.7767, -96.7970);
+    var mapProp = {
+        center: dallasLatLng,
+        zoom: 12,
+    };
+    window.map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+    </script>
+
+    <div class="footer">
+        <h2>Spencer Barr 2023 - All photos from https://www.freepik.com/</h2>
+    </div>
+</body>
+
+</html>
